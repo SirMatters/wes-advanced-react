@@ -6,6 +6,7 @@ import {
   statelessSessions,
 } from '@keystone-next/keystone/session';
 import { User } from './schemas/User';
+import { Product } from './schemas/Product';
 
 const databasUrl =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -41,6 +42,7 @@ export default withAuth(
     lists: createSchema({
       // schema items go here
       User,
+      Product,
     }),
     ui: {
       // show the UI only for those who pass the test
